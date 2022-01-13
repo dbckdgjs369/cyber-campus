@@ -6,8 +6,8 @@ export const Nav = styled.div`
 `;
 
 export const NavElement = styled.div`
-  width: 17%;
-  font-size: 20px;
+  width: 18%;
+  font-size: 18px;
   height: 60px;
   float: left;
   text-align: center;
@@ -40,7 +40,7 @@ export const NavElement2 = styled.div`
   margin-left: 2%;
   display: inline-block;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   height: 50px;
   float: left;
   text-align: center;

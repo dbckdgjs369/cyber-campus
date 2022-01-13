@@ -2,14 +2,20 @@ import React from "react";
 import { NameElement, Nav, Nav2, NavElement, NavElement2 } from "./style";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import Divider from "@mui/material/Divider";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <div>
       <Nav>
         <NavElement style={{ marginRight: "150px" }}>
-          <img src="image/logo.png" style={{ height: "50px" }}></img>
+          <Link to="/todo">
+            <img
+              src="image/logo.png"
+              alt="로고"
+              style={{ height: "50px" }}
+            ></img>
+          </Link>
         </NavElement>
         <NavElement>
           <p>
@@ -42,7 +48,9 @@ export default function NavBar() {
       </Nav>
       <Nav2>
         <NavElement2>강의실</NavElement2>
-        <NavElement2>TO-DO-List</NavElement2>
+        <Link to="/todo">
+          <NavElement2>TO-DO-List</NavElement2>
+        </Link>
         <NavElement2>학습현황</NavElement2>
       </Nav2>
     </div>
