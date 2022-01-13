@@ -1,13 +1,6 @@
 import React from "react";
-import { hiddenUl } from "./styled";
 
 export default function DropDown() {
-  //   const OPTIONS = [
-  //     { value: "apple", name: "사과" },
-  //     { value: "banana", name: "바나나" },
-  //     { value: "orange", name: "오렌지" },
-  //   ];
-
   return (
     <div>
       <select>
