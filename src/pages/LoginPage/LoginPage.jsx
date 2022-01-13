@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControl, LoginBtn, Loginpage, NoticeBox } from "./style";
+import { LoginBtn, Loginpage, NoticeBox } from "./style";
 import { NoticeDiv } from "./style";
 import { LoginDiv } from "./style";
 import { CenterDiv } from "./style";
@@ -41,7 +41,7 @@ export default function LoginPage() {
         </NoticeDiv>
         <LoginDiv xs={6} md={4}>
           <div>
-            <img src="image/logo.png" style={{ width: "70%" }}></img>
+            <img src="image/logo.png" alt="로고" style={{ width: "70%" }}></img>
             <DropDown />
             <Input
               id="input-with-icon-adornment"
