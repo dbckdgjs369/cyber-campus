@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonwithImg from "../../components/ButtonwithImg/ButtonwithImg";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
@@ -11,7 +11,8 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import GroupsIcon from "@mui/icons-material/Groups";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
-
+import FolderSpecialOutlinedIcon from "@mui/icons-material/FolderSpecialOutlined";
+import PageArrow from "../../components/PageArrow/PageArrow";
 import {
   DropDown,
   NoticeDiv,
@@ -23,6 +24,7 @@ import {
 } from "./style";
 
 export default function TodoPage() {
+  const [isEmpty, setisEmpty] = useState(true);
   return (
     <div>
       <NavBar></NavBar>
@@ -140,14 +142,108 @@ export default function TodoPage() {
             style={{
               clear: "both",
               marginTop: "1rem",
-              borderTop: "1px solid black",
+              minHeight: "20vh",
+              height: "auto",
             }}
-          ></div>
+          >
+            <div
+              style={{
+                textAlign: "center",
+                height: "100%",
+                marginTop: "50px",
+                fontSize: "12px",
+                borderBottom: "1px solid #d0d9ea",
+                borderTop: "1px solid #d0d9ea",
+                minHeight: "20vh",
+              }}
+            >
+              {isEmpty && (
+                <div>
+                  <FolderSpecialOutlinedIcon
+                    fontSize="large"
+                    style={{
+                      width: "4rem",
+                      height: "4rem",
+                      color: "#dfe5f0",
+                      marginTop: "20px",
+                    }}
+                  />
+                  <p>확인할 내역이 없습니다.</p>
+                </div>
+              )}
+            </div>
+          </div>
         </TodoDiv>
         <h6 style={{ fontWeight: "bold" }}>공지사항</h6>
-        <TodoDiv></TodoDiv>
+        <TodoDiv>
+          <div
+            style={{
+              textAlign: "center",
+              height: "100%",
+              marginTop: "50px",
+              fontSize: "12px",
+              borderBottom: "1px solid #d0d9ea",
+            }}
+          >
+            {isEmpty && (
+              <div>
+                <FolderSpecialOutlinedIcon
+                  fontSize="large"
+                  style={{
+                    width: "4rem",
+                    height: "4rem",
+                    color: "#dfe5f0",
+                    marginTop: "5%",
+                  }}
+                />
+                <p>확인할 내역이 없습니다.</p>
+              </div>
+            )}
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              marginTop: "1rem",
+            }}
+          >
+            <PageArrow style={{ left: "50%", top: "50%" }} />
+          </div>
+        </TodoDiv>
         <h6 style={{ fontWeight: "bold" }}>Q&A</h6>
-        <TodoDiv></TodoDiv>
+        <TodoDiv>
+          <div
+            style={{
+              textAlign: "center",
+              height: "100%",
+              marginTop: "50px",
+              fontSize: "12px",
+              borderBottom: "1px solid #d0d9ea",
+            }}
+          >
+            {isEmpty && (
+              <div>
+                <FolderSpecialOutlinedIcon
+                  fontSize="large"
+                  style={{
+                    width: "4rem",
+                    height: "4rem",
+                    color: "#dfe5f0",
+                    marginTop: "5%",
+                  }}
+                />
+                <p>확인할 내역이 없습니다.</p>
+              </div>
+            )}
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              marginTop: "1rem",
+            }}
+          >
+            <PageArrow />
+          </div>
+        </TodoDiv>
         <Footer></Footer>
       </MainDiv>
     </div>

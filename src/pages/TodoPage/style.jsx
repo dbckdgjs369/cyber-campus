@@ -11,12 +11,14 @@ export const DropDown = styled.select`
 export const TodoDiv = styled.div`
   border: 1px solid #f1f1f0;
   background-color: white;
-  height: 30vh;
+  min-height: 30vh;
+  height: auto;
   border-radius: 5px;
   margin-bottom: 3rem;
   clear: both;
   box-shadow: 0px 0px 1px 1px #f1f1f0;
   padding: 2rem;
+  overflow: hidden;
 `;
 
 export const NoticeDiv = styled.div`
