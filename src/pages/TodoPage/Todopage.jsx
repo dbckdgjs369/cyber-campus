@@ -13,8 +13,6 @@ import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
 import FolderSpecialOutlinedIcon from "@mui/icons-material/FolderSpecialOutlined";
 import PageArrow from "../../components/PageArrow/PageArrow";
-
-
 import {
   DropDown,
   NoticeDiv,
@@ -246,14 +244,6 @@ export default function TodoPage() {
             <PageArrow />
           </div>
         </TodoDiv>
-              borderTop: "1px solid black",
-            }}
-          ></div>
-        </TodoDiv>
-        <h6 style={{ fontWeight: "bold" }}>공지사항</h6>
-        <TodoDiv></TodoDiv>
-        <h6 style={{ fontWeight: "bold" }}>Q&A</h6>
-        <TodoDiv></TodoDiv>
         <Footer></Footer>
       </MainDiv>
     </div>

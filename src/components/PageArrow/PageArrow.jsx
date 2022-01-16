@@ -7,7 +7,6 @@ export default function PageArrow() {
   return (
     <div
       style={{
-        border: "1PX SOLID BLACK",
         display: "inline-block",
       }}
     >
@@ -16,12 +15,6 @@ export default function PageArrow() {
           style={{
             width: "40px",
             height: "40px",
-            // textAlign: "center",
-            // position: "absolute",
-            // left: "50%",
-            // top: "50%",
-            // marginLeft: "-20px",
-            // marginTop: "-20px",
           }}
         />
       </Button>
