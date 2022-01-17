@@ -47,7 +47,9 @@ export default function NavBar() {
         </NameElement>
       </Nav>
       <Nav2>
-        <NavElement2>강의실</NavElement2>
+        <Link to="/myLecture">
+          <NavElement2>강의실</NavElement2>
+        </Link>
         <Link to="/todo">
           <NavElement2>TO-DO-List</NavElement2>
         </Link>
