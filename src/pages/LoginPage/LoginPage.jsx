@@ -62,7 +62,7 @@ export default function LoginPage() {
             />
             <br />
             <br />
-            <Link to="/main">
+            <Link to="/todo">
               <LoginBtn>로그인</LoginBtn>
             </Link>
           </div>
