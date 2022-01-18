@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Nav = styled.div`
   width: 100%;
-  height: 7vh;
+  height: 60px;
 `;
 
 export const NavElement = styled.div`
