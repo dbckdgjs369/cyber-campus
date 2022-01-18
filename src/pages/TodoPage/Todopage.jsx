@@ -11,7 +11,6 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import GroupsIcon from "@mui/icons-material/Groups";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined";
-import FolderSpecialOutlinedIcon from "@mui/icons-material/FolderSpecialOutlined";
 import PageArrow from "../../components/PageArrow/PageArrow";
 import { DropDown, SelectDiv, TodoDiv, Text, InnerDiv } from "./style";
 
@@ -134,8 +133,7 @@ export default function TodoPage() {
             style={{
               clear: "both",
               marginTop: "1rem",
-              minHeight: "20vh",
-              height: "auto",
+              borderTop: "1px solid black",
             }}
           >
             <div
