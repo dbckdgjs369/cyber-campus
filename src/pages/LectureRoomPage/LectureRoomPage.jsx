@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import { MainDiv } from "../../layouts/Mainlayout/style";
-import { DropDown, Innerdiv, LectureDiv, P, Square } from "./style";
+import { DropDown, Innerdiv, P, Square } from "./style";
 import GridViewIcon from "@mui/icons-material/GridView";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
-import Lecture from "../../components/Lecture/Lecture";
+import CardTypeLecture from "../../components/CardTypeLecture/CardTypeLecture";
+import ListTypeLecture from "../../components/ListTypeLecture/ListTypeLecture";
 
 export default function LectureRoomPage() {
+  const [showStyle, setshowStyle] = useState(false);
+  const changeStyle = () => {
+    if (showStyle === false) {
+      setshowStyle(true);
+    } else {
+      setshowStyle(false);
+    }
+  };
+
   return (
     <div>
       <NavBar></NavBar>
@@ -103,6 +113,7 @@ export default function LectureRoomPage() {
                 border: "1px solid #164194",
                 backgroundColor: "white",
               }}
+              onClick={changeStyle}
             >
               <GridViewIcon
                 style={{
@@ -122,6 +133,7 @@ export default function LectureRoomPage() {
                 border: "1px solid #164194",
                 backgroundColor: "white",
               }}
+              onClick={changeStyle}
             >
               <DensityMediumIcon
                 style={{
@@ -134,43 +146,10 @@ export default function LectureRoomPage() {
             </button>
           </div>
         </div>
-        <LectureDiv>
-          <Lecture
-            classification="교양(일반)"
-            title="프랑스문화 테마기행(03반)"
-            grade="3학점"
-            profinfo="송진석"
-            class="불어불문학과"
-          ></Lecture>
-          <Lecture
-            classification="전공(기초)"
-            title="컴퓨터프로그래밍 2(07반)"
-            grade="3학점"
-            profinfo="조승범"
-            class="컴퓨터융합학부"
-          ></Lecture>
-          <Lecture
-            classification="전공(심화)"
-            title="분산시스템(00반)"
-            grade="3학점"
-            profinfo="양희철"
-            class="컴퓨터공학과"
-          ></Lecture>
-          <Lecture
-            classification="전공(심화)"
-            title="수치프로그래밍(00반)"
-            grade="3학점"
-            profinfo="김경섭"
-            class="컴퓨터융합학부"
-          ></Lecture>
-          <Lecture
-            classification="전공(심화)"
-            title="컴파일러개론(01반)"
-            grade="3학점"
-            profinfo="조은선"
-            class="컴퓨터융합학부"
-          ></Lecture>
-        </LectureDiv>
+        <div>
+          {showStyle && <CardTypeLecture />}
+          {!showStyle && <ListTypeLecture />}
+        </div>
         <Footer></Footer>
       </MainDiv>
     </div>
