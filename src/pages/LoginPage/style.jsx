@@ -1,31 +1,13 @@
 import styled from "@emotion/styled";
 
-// export const PostType = styled(Chip)`
-//   color: white;
-// `;
-
-export const NoticeBox = styled.div`
-  border-top: 1px solid black;
-  // border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  text-align: left;
-  padding: 1rem;
-  margin-right: 1rem;
+export const Login = styled.div`
+  font-family: "Noto Sans KR";
+  height: 100vh;
+  color: #454545;
+  background-color: #f6f6f6;
+  font-size: 0.8125rem;
 `;
 
-export const NoticeDiv = styled.div`
-  // border: 1px solid black;
-  margin: 1rem;
-  border-right: 1px solid gray;
-  width: 50%;
-`;
-
-export const LoginDiv = styled.div`
-  border: 1px solid black;
-  text-align: center;
-  width: 50%;
-`;
 export const CenterDiv = styled.div`
   position: absolute;
   top: 50%;
@@ -33,19 +15,53 @@ export const CenterDiv = styled.div`
   display: flex;
   width: 850px;
   height: 600px;
-
   padding: 40px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 5px;
   border: solid 1px #e9e9e9;
   box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+
+  @media (max-width: 991.98px) {
+    width: 90%;
+    flex-flow: row wrap;
+  }
 `;
-export const Loginpage = styled.div`
-  font-family: "Noto Sans KR";
-  color: #454545;
-  background-color: #f6f6f5;
-  font-size: 0.8125rem;
+
+export const NoticeBox = styled.div`
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  text-align: left;
+  padding: 15px;
+  margin-right: 1rem;
+`;
+
+export const NoticeDiv = styled.div`
+  position: relative;
+  flex: 1;
+  // padding: 20 0px;
+  border-right: 1px solid #eeeeee;
+  @media (max-width: 990px) {
+    margin-bottom: 20px;
+    border-right: solid 0px #eee;
+  }
+  @media (max-width: 991.98px) {
+    flex: none;
+    width: 100%;
+    padding: 0;
+  }
+`;
+
+export const LoginDiv = styled.div`
+  position: relative;
+  flex: 1;
+  padding: 0 20px;
+  @media only screen and(max-width:990px) {
+    flex: none;
+    width: 100%;
+    padding: 0;
+  }
 `;
 
 export const FormControl = styled.input`
@@ -67,8 +83,38 @@ export const LoginBtn = styled.button`
   background-color: #164194;
   border-color: #164194;
   color: white;
+  width: 100%;
+  height: 50px;
+`;
+export const Ul = styled.ul`
+  list-style: none;
+  padding-left: 0px;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+`;
+export const A = styled.a`
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: black;
+  text-decoration: none;
 `;
 
+export const Span = styled.span`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* ellipsis line */
+  -webkit-box-orient: vertical;
+
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // word-wrap: break-word;
+  // display: -webkit-box;
+  // -webkit-line-clamp: 2; /* ellipsis line */
+  // -webkit-box-orient: vertical;
+`;
 // /* 파일 업로드 화면에서 썸네일 크기 수정 */
 // #uploadBox table td.fileThumnail.img {
 //   padding: 2px;

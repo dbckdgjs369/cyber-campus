@@ -2,8 +2,16 @@ import React from "react";
 
 export default function DropDown() {
   return (
-    <div>
-      <select>
+    <div style={{ margin: "1rem 0" }}>
+      <select
+        style={{
+          width: "100%",
+          height: "35px",
+          fontSize: "0.825rem",
+          border: "1px solid #D0D9EA",
+          paddingLeft: "10px",
+        }}
+      >
         <option key="daedeok" value="daedeok">
           대덕대학교
         </option>

@@ -1,8 +1,8 @@
 import React from "react";
-import { LoginBtn, Loginpage, NoticeBox } from "./style";
+import { LoginBtn, Login, NoticeBox, A, Span } from "./style";
 import { NoticeDiv } from "./style";
 import { LoginDiv } from "./style";
-import { CenterDiv } from "./style";
+import { CenterDiv, Ul, p } from "./style";
 import InputAdornment from "@mui/material/InputAdornment";
 import Input from "@mui/material/Input";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,18 +14,20 @@ import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   return (
-    <Loginpage>
-      <CenterDiv xs={12} md={4}>
+    <Login>
+      <CenterDiv>
         <NoticeDiv>
-          <h6 style={{ textAlign: "left" }}>
+          <h3 style={{ textAlign: "left", fontSize: "1.125rem" }}>
             <b>공지사항</b>
-          </h6>
-          <NoticeBox>
-            대전·충남 이러닝 학점 교류 로그인 안내
-            <br />
+          </h3>
+          {/* <NoticeBox>
+            <p></p>대전·충남 이러닝 학점 교류 로그인 안내
+            <span>
+              로그인 방법 1. 대전충남 학점교류 선택2. 소속 학교 선택 3. 아이디:
+              소속 학교 학번 4. 비밀번호: 생년월일 6자리(예: 091212)
+            </span>
             <AccessTimeIcon />
           </NoticeBox>
-
           <NoticeBox>
             신규 사이버 캠퍼스 로그인 관련 안내입니다. <br />
             <AccessTimeIcon />
@@ -34,14 +36,94 @@ export default function LoginPage() {
             대학원격 교육지원센터 릴레이 포럼(제1회)개최 안내 <br />
             <AccessTimeIcon />
           </NoticeBox>
-          <NoticeBox style={{ borderBottom: "1px solid black" }}>
+          <NoticeBox style={{ borderBottom: "1px solid #DDDDDD" }}>
             대학원격교육지원센터 IGNITE콘퍼런스 개최 안내 <br />
             <AccessTimeIcon />
-          </NoticeBox>
+          </NoticeBox> */}
+          <Ul>
+            <NoticeBox>
+              <li>
+                <A href="https://homepage.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=265180">
+                  대전·충남 이러닝 학점 교류 로그인 안내
+                </A>
+                <Span>
+                  로그인 방법 1. 대전충남 학점교류 선택2. 소속 학교 선택 3.
+                  아이디: 소속 학교 학번 4. 비밀번호: 생년월일 6자리(예: 091212)
+                </Span>
+                <span>
+                  <AccessTimeIcon />
+                </span>
+              </li>
+            </NoticeBox>
+            <NoticeBox style={{ textOverflow: "ellipsis" }}>
+              <li>
+                <A href="https://udec.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=255200">
+                  신규 사이버 캠퍼스 로그인 관련 안내입니다.
+                </A>
+                <Span
+                  style={{
+                    textOverflow: "ellipsis",
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    wordBreak: "break-word",
+                    WebkitLineClamp: "2",
+                  }}
+                >
+                  1. 대학 선택 (인터넷 익스플로러 지원하지 않음) 2. 아이디:
+                  학번/교번 3. 비밀번호: 생년월일 6자리 충남대학교 소속
+                  학생/교원은 포털시스템에서 SSO로 연동 진행중에 있습니다.
+                  비밀번호 변경은 비밀번호 찾기 기능을 보완하여 수정할 수 있도록
+                  하겠습니다. (ex, 비밀번호 찾기는 포털 아이디/비밀번호 인증 후
+                  변경 등)
+                </Span>
+                <span>
+                  <AccessTimeIcon />
+                </span>
+              </li>
+            </NoticeBox>
+            <NoticeBox>
+              <li>
+                <A href="https://homepage.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=240016">
+                  대학원격 교육지원센터 릴레이 포럼(제1회)개최 안내
+                </A>
+                <Span style={{ overflow: "hidden" }}>
+                  대학원격교육지원센터 릴레이 포럼(제1회) 개요 1. 일시 : 2021.
+                  8. 6.(금), 10:00 ~ 11:30 2. 목적 : 대학 간 원격교육 관련 사례
+                  공유를 통한 교류 활성화 촉진 및 대학원격교육지원센터 발전 방안
+                  모색
+                </Span>
+                <span>
+                  <AccessTimeIcon />
+                </span>
+              </li>
+            </NoticeBox>
+            <NoticeBox style={{ borderBottom: "1px solid #DDDDDD" }}>
+              <A href="https://homepage.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=216223">
+                대학원격교육지원센터 IGNITE콘퍼런스 개최 안내
+              </A>
+              <Span>
+                대학원격교육지원센터 IGNITE 콘퍼런스 개최 안내 1. 관련:
+                고등평생교육부-2331(2021.05.27.) 2. 위와 관련하여
+                대학원격교육지원센터 설치·운영 사업 계획 공유 및 대학원격교육
+                발전 방안 모색을 위해 「대학원격교육지원센터 IGNITE 콘퍼런스」를
+                다음과 같이 개최하오니 많은 관심과 참석 부탁드립니다.
+              </Span>
+              <span>
+                <AccessTimeIcon />
+              </span>
+            </NoticeBox>
+          </Ul>
         </NoticeDiv>
-        <LoginDiv xs={6} md={4}>
+        <LoginDiv>
           <div>
-            <img src="image/logo.png" alt="로고" style={{ width: "70%" }}></img>
+            <span>
+              <img
+                src="image/logo.png"
+                alt="로고"
+                style={{ width: "100%" }}
+              ></img>
+            </span>
             <DropDown />
             <Input
               id="input-with-icon-adornment"
@@ -50,12 +132,17 @@ export default function LoginPage() {
                   <AccountCircle />
                 </InputAdornment>
               }
+              style={{ width: "100%" }}
             />
             <br /> <br />
             <Input
               id="input-with-icon-adornment"
+              style={{ width: "100%" }}
               startAdornment={
-                <InputAdornment position="start" style={{ hover: "blue" }}>
+                <InputAdornment
+                  position="start"
+                  style={{ hover: "blue", width: "100%" }}
+                >
                   <LockIcon />
                 </InputAdornment>
               }
@@ -66,12 +153,12 @@ export default function LoginPage() {
               <LoginBtn>로그인</LoginBtn>
             </Link>
           </div>
-          {/* <h6>
+          <h6>
             로그인에 문제가 있을경우 소속학교/기관의 담당 부서에 문의해 주시기
             바랍니다.
-          </h6> */}
+          </h6>
         </LoginDiv>
       </CenterDiv>
-    </Loginpage>
+    </Login>
   );
 }
