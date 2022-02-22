@@ -63,27 +63,28 @@ export const LoginDiv = styled.div`
   }
 `;
 
-// export const FormControl = styled.input`
-//   display: block;
-//   width: 90%;
-//   margin: 1rem;
-//   padding: 0.45rem 0.9rem;
-//   font-size: 0.8125rem;
-//   font-weight: 400;
-//   line-height: 1.5;
-//   color: #6c757d;
-//   background-color: #fff;
-//   background-clip: padding-box;
-//   border: 1px solid #ced4da;
-//   border-radius: 0.2rem;
-//   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-// `;
+export const Img = styled.img`
+  height: 52px;
+  minheight: 52px;
+`;
+export const ImageSpan = styled.span`
+  height: 52px;
+  minheight: 52px;
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+  @media (max-width: 660px) {
+    display: block;
+  }
+`;
+
 export const LoginBtn = styled.button`
   background-color: #164194;
   border-color: #164194;
   color: white;
   width: 100%;
   height: 50px;
+  margin-bottom: 30px;
 `;
 export const Ul = styled.ul`
   list-style: none;
@@ -111,11 +112,11 @@ export const Span = styled.span`
   -webkit-box-orient: vertical;
   margin-bottom: 4px;
   font-size: 0.8125rem;
-
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  // word-wrap: break-word;
-  // display: -webkit-box;
-  // -webkit-line-clamp: 2; /* ellipsis line */
-  // -webkit-box-orient: vertical;
+  @media (max-width: 991.98px) {
+    height: 30px;
+    display: none;
+  }
+  @media (max-width: 660px) {
+    display: block;
+  }
 `;

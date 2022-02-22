@@ -1,8 +1,16 @@
 import React from "react";
-import { LoginBtn, Login, NoticeBox, A, Span } from "./style";
-import { NoticeDiv } from "./style";
-import { LoginDiv } from "./style";
-import { CenterDiv, Ul, p } from "./style";
+import {
+  LoginBtn,
+  Login,
+  NoticeBox,
+  A,
+  Span,
+  Img,
+  NoticeDiv,
+  LoginDiv,
+  CenterDiv,
+  Ul,
+} from "./style";
 import InputAdornment from "@mui/material/InputAdornment";
 import Input from "@mui/material/Input";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,15 +25,41 @@ export default function LoginPage() {
     <Login>
       <CenterDiv>
         <NoticeDiv>
-          <h3
+          <div
             style={{
-              textAlign: "left",
-              fontSize: "1.125rem",
-              // whiteSpace: "nowrap",
+              display: "flex",
+              flexDirection: "row",
+              paddingRight: "20px",
             }}
           >
-            <b>공지사항</b>
-          </h3>
+            <h3
+              style={{
+                textAlign: "left",
+                fontSize: "1.125rem",
+                float: "left",
+              }}
+            >
+              <b>공지사항</b>
+            </h3>
+            <A
+              href="https://homepage.cnu.ac.kr/udec/info/notice.do"
+              target="_blank"
+              style={{
+                width: "30px",
+                height: "30px",
+                textAlign: "center",
+                fontSize: "20px",
+                paddingBottom: "30px",
+                display: "block",
+                float: "right",
+                position: "absolute",
+                right: "0",
+                paddingRight: "40px",
+              }}
+            >
+              +
+            </A>
+          </div>
           <Ul>
             <NoticeBox>
               <li style={{ textAlign: "-webkit-match-parent" }}>
@@ -52,16 +86,7 @@ export default function LoginPage() {
                 <A href="https://udec.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=255200">
                   신규 사이버 캠퍼스 로그인 관련 안내입니다.
                 </A>
-                <Span
-                  style={{
-                    textOverflow: "ellipsis",
-                    overflow: "hidden",
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    wordBreak: "break-word",
-                    WebkitLineClamp: "2",
-                  }}
-                >
+                <Span>
                   1. 대학 선택 (인터넷 익스플로러 지원하지 않음) 2. 아이디:
                   학번/교번 3. 비밀번호: 생년월일 6자리 충남대학교 소속
                   학생/교원은 포털시스템에서 SSO로 연동 진행중에 있습니다.
@@ -128,11 +153,7 @@ export default function LoginPage() {
         <LoginDiv>
           <div>
             <span>
-              <img
-                src="image/logo.png"
-                alt="로고"
-                style={{ width: "100%", height: "52px", minHeight: "52px" }}
-              ></img>
+              <Img src="image/logo.png" alt="로고"></Img>
             </span>
             <DropDown />
             <div
@@ -145,26 +166,25 @@ export default function LoginPage() {
             >
               <Input
                 id="input-with-icon-adornment"
+                placeholder="아이디"
                 startAdornment={
                   <InputAdornment position="start">
                     <AccountCircle />
                   </InputAdornment>
                 }
-                style={{ width: "100%" }}
+                style={{ width: "100%", margin: "40px 0" }}
               />
             </div>
-            <br /> <br />
             <Input
               id="input-with-icon-adornment"
-              style={{ width: "100%" }}
+              type="password"
+              placeholder="비밀번호"
               startAdornment={
-                <InputAdornment
-                  position="start"
-                  style={{ hover: "blue", width: "100%" }}
-                >
+                <InputAdornment position="start">
                   <LockIcon />
                 </InputAdornment>
               }
+              style={{ width: "100%", marginBottom: "50px" }}
             />
             <br />
             <br />
@@ -172,7 +192,7 @@ export default function LoginPage() {
               <LoginBtn>로그인</LoginBtn>
             </Link>
           </div>
-          <p>
+          <p style={{ color: "#98a6ad" }}>
             로그인에 문제가 있을경우
             <a
               href="https://udec.cnu.ac.kr/udec/use/URL.do"
