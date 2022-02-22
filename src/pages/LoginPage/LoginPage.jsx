@@ -17,32 +17,18 @@ export default function LoginPage() {
     <Login>
       <CenterDiv>
         <NoticeDiv>
-          <h3 style={{ textAlign: "left", fontSize: "1.125rem" }}>
+          <h3
+            style={{
+              textAlign: "left",
+              fontSize: "1.125rem",
+              // whiteSpace: "nowrap",
+            }}
+          >
             <b>공지사항</b>
           </h3>
-          {/* <NoticeBox>
-            <p></p>대전·충남 이러닝 학점 교류 로그인 안내
-            <span>
-              로그인 방법 1. 대전충남 학점교류 선택2. 소속 학교 선택 3. 아이디:
-              소속 학교 학번 4. 비밀번호: 생년월일 6자리(예: 091212)
-            </span>
-            <AccessTimeIcon />
-          </NoticeBox>
-          <NoticeBox>
-            신규 사이버 캠퍼스 로그인 관련 안내입니다. <br />
-            <AccessTimeIcon />
-          </NoticeBox>
-          <NoticeBox>
-            대학원격 교육지원센터 릴레이 포럼(제1회)개최 안내 <br />
-            <AccessTimeIcon />
-          </NoticeBox>
-          <NoticeBox style={{ borderBottom: "1px solid #DDDDDD" }}>
-            대학원격교육지원센터 IGNITE콘퍼런스 개최 안내 <br />
-            <AccessTimeIcon />
-          </NoticeBox> */}
           <Ul>
             <NoticeBox>
-              <li>
+              <li style={{ textAlign: "-webkit-match-parent" }}>
                 <A href="https://homepage.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=265180">
                   대전·충남 이러닝 학점 교류 로그인 안내
                 </A>
@@ -50,13 +36,19 @@ export default function LoginPage() {
                   로그인 방법 1. 대전충남 학점교류 선택2. 소속 학교 선택 3.
                   아이디: 소속 학교 학번 4. 비밀번호: 생년월일 6자리(예: 091212)
                 </Span>
-                <span>
-                  <AccessTimeIcon />
+                <span style={{ color: "#98a6ad" }}>
+                  <AccessTimeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginRight: "2px",
+                    }}
+                  />
+                  2021-09-01
                 </span>
               </li>
             </NoticeBox>
             <NoticeBox style={{ textOverflow: "ellipsis" }}>
-              <li>
+              <li style={{ textAlign: "-webkit-match-parent" }}>
                 <A href="https://udec.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=255200">
                   신규 사이버 캠퍼스 로그인 관련 안내입니다.
                 </A>
@@ -77,13 +69,19 @@ export default function LoginPage() {
                   하겠습니다. (ex, 비밀번호 찾기는 포털 아이디/비밀번호 인증 후
                   변경 등)
                 </Span>
-                <span>
-                  <AccessTimeIcon />
+                <span style={{ color: "#98a6ad" }}>
+                  <AccessTimeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginRight: "2px",
+                    }}
+                  />
+                  2021-08-11
                 </span>
               </li>
             </NoticeBox>
             <NoticeBox>
-              <li>
+              <li style={{ textAlign: "-webkit-match-parent" }}>
                 <A href="https://homepage.cnu.ac.kr/udec/info/notice.do?mode=view&articleNo=240016">
                   대학원격 교육지원센터 릴레이 포럼(제1회)개최 안내
                 </A>
@@ -93,8 +91,14 @@ export default function LoginPage() {
                   공유를 통한 교류 활성화 촉진 및 대학원격교육지원센터 발전 방안
                   모색
                 </Span>
-                <span>
-                  <AccessTimeIcon />
+                <span style={{ color: "#98a6ad" }}>
+                  <AccessTimeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginRight: "2px",
+                    }}
+                  />
+                  2021-08-02
                 </span>
               </li>
             </NoticeBox>
@@ -109,8 +113,14 @@ export default function LoginPage() {
                 발전 방안 모색을 위해 「대학원격교육지원센터 IGNITE 콘퍼런스」를
                 다음과 같이 개최하오니 많은 관심과 참석 부탁드립니다.
               </Span>
-              <span>
-                <AccessTimeIcon />
+              <span style={{ color: "#98a6ad" }}>
+                <AccessTimeIcon
+                  style={{
+                    fontSize: "20px",
+                    marginRight: "2px",
+                  }}
+                />
+                2021-06-01
               </span>
             </NoticeBox>
           </Ul>
@@ -121,19 +131,28 @@ export default function LoginPage() {
               <img
                 src="image/logo.png"
                 alt="로고"
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "52px", minHeight: "52px" }}
               ></img>
             </span>
             <DropDown />
-            <Input
-              id="input-with-icon-adornment"
-              startAdornment={
-                <InputAdornment position="start">
-                  <AccountCircle />
-                </InputAdornment>
-              }
-              style={{ width: "100%" }}
-            />
+            <div
+              style={{
+                borderWidth: "0 0 1px 0",
+                paddingTop: "7px",
+                paddingBottom: "7px",
+                borderColor: "#d0d9ea",
+              }}
+            >
+              <Input
+                id="input-with-icon-adornment"
+                startAdornment={
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                }
+                style={{ width: "100%" }}
+              />
+            </div>
             <br /> <br />
             <Input
               id="input-with-icon-adornment"
@@ -153,10 +172,19 @@ export default function LoginPage() {
               <LoginBtn>로그인</LoginBtn>
             </Link>
           </div>
-          <h6>
-            로그인에 문제가 있을경우 소속학교/기관의 담당 부서에 문의해 주시기
-            바랍니다.
-          </h6>
+          <p>
+            로그인에 문제가 있을경우
+            <a
+              href="https://udec.cnu.ac.kr/udec/use/URL.do"
+              target="_blank"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              <strong>
+                <u>소속 학교/기관의 담당 부서</u>
+              </strong>
+            </a>
+            에 문의해 주시기 바랍니다.
+          </p>
         </LoginDiv>
       </CenterDiv>
     </Login>
